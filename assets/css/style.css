@@ -29,9 +29,16 @@
     background-size: cover;
     animation: animate ease-in .6s forwards;
 }
-.navigation {
+.navigation,.banner {
     margin-inline: auto;
     width: 80%;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'kalam';
+    color: var(--second);
 }
 .navigation {
     height: 20%;
@@ -41,13 +48,13 @@
 }
 .logo {
     animation: animateLogo ease-in 1s forwards;
-    font-family: 'SwashedS';
+    font-family: 'poppinsR';
     text-transform: uppercase;
-    color: whitesmoke;
-    font-size: 1.6em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--second);
     transition: all ease-in-out .4s;
     &:hover {
-        color: var(--second);
         scale: 1.2;
     }
 }
@@ -159,7 +166,6 @@
     animation: animate ease-in .8s forwards;
 }
 .products .card {
-    background-image: url('../images/cover.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -294,9 +300,9 @@
     width: 100%;
     height: max-content;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    background-color: var(--primary);
+    background-color: #e9be8c49 ;
 }
 .footer .content_text, .content_social {
     display: flex;

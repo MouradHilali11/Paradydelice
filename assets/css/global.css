@@ -15,7 +15,10 @@
     font-family: 'swashedS';
     src: url('../fonts/SwashedS.ttf');
 }
-
+@font-face {
+    font-family: 'kalam';
+    src: url('../fonts/KalamB.ttf');
+}
 :root {
     --primary :#E9BD8C ;
     --second : #933C24 ;

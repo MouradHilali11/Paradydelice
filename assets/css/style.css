@@ -1,0 +1,376 @@
+@import url('./global.css');
+
+@keyframes animate {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes animateLogo {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.header {
+    width: 100%;
+    height: 31.25em;
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animate ease-in .6s forwards;
+}
+.navigation {
+    margin-inline: auto;
+    width: 80%;
+}
+.navigation {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    animation: animateLogo ease-in 1s forwards;
+    font-family: 'SwashedS';
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 1.6em;
+    transition: all ease-in-out .4s;
+    &:hover {
+        color: var(--second);
+        scale: 1.2;
+    }
+}
+.navigation .links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    animation: animate ease-in 1s forwards;
+}
+.links .link {
+    color: whitesmoke;
+    font-family: 'poppinsR';
+    font-weight: 600;
+    transition: all ease-in-out .4s;
+    &:hover {
+        color: var(--second);
+        scale: 1.2;
+    }
+}
+.bars {
+    display: none;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    animation: animate ease-in 1s forwards;
+}
+
+@keyframes open{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+.menu {
+    width: 0%;
+    height: 100%;
+    padding: 1em;
+    transition: width 0.5s ease;
+    display: none;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px gray;
+    z-index: 1000;
+    overflow: hidden;
+    animation: open ease-in-out .5s forwards;
+}
+.menu .navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.close {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+.menu .navigation .link {
+    color: whitesmoke;
+    font-family: 'poppinsR';
+    font-family: 1.1em;
+}
+
+.banner {
+    height: 80%;
+}
+
+.content {
+    margin-block: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+.top_products {
+    width: 100%;
+    height: max-content;
+}
+.container .title {
+    font-size: 2.4em;
+    font-family: 'SwashedS';
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1em;
+    animation: animateLogo ease-in .8s forwards;
+}
+.top_products .products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    animation: animate ease-in .8s forwards;
+}
+.products .card {
+    background-image: url('../images/cover.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 13.5em;
+    height: 13.5em;
+    padding: .625em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease-in-out .4s;
+    &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+}
+.products:hover .card:not(:hover) {
+    filter: blur(4px);
+    transform: scale(0.95);
+    opacity: 0.6;
+}
+.card .card_img {
+    width: 10.5em;
+    aspect-ratio: 1/1;
+}
+.card .card_title {
+    color: whitesmoke;
+    font-size: 1.1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card .card_price {
+    position: absolute;
+    bottom: 16em;
+    left: .5em;
+    color: whitesmoke;
+    padding: .6em .8em;
+    background-color: var(--second);
+    border-radius: .6em;
+    font-size: .7em;
+}
+
+.offer {
+    width: 100%;
+    height: 18.75em;
+    background-image: url('../images/cover2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer .offer_text {
+    text-align: center;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.offer_text .text_title {
+    color: var(--second);
+    font-size: 2em;
+    font-family: 'SwashedS';
+    letter-spacing: 2px;
+}
+.offer_text .text_desc {
+    text-align: center;
+}
+.offer_text .text_link {
+    padding: .8em 1em;
+    background-color: var(--second);
+    color: whitesmoke;
+    transition: all ease-in-out .4s;
+    font-weight: 600;
+    &:hover {
+        color: var(--second);
+        background-color: transparent;
+        border: 1px solid var(--second);
+    }
+}
+.more {
+    margin-inline: auto;
+    width: 90%;
+}
+.more .more_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: animate ease-in 1s forwards;;
+}
+.more_links .link {
+    transition: all ease-in-out 0.2s;
+}
+
+.more_links .link:hover,
+.more_links .link.active {
+    border-bottom: 2px solid var(--second);
+    padding-bottom: 2px;
+}
+
+.more .more_products {
+    margin-top: 2em;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    animation: animate ease-in 1s forwards;;
+}
+.more_products .product_img {
+    width: 12.5em;
+    height: 12.5em;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.footer {
+    margin-top: 1em;
+    padding-block: 2em;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primary);
+}
+.footer .content_text, .content_social {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+@media screen and (max-width: 56.25em) {
+    .navigation {
+        width: 90%;
+    }
+    .navigation .links {
+        display: none;
+    }
+    .bars {
+        display: block;
+    }
+}
+@media screen and (max-width:75em) {
+    .navigation, .banner {
+        width: 90%;
+    }
+    .navigation .links {
+        justify-content: end;
+    }
+    .top_products .products {
+        justify-content: center;
+        padding-inline: .5em;
+    }
+    .products .card {
+        width: 11em;
+        height: 11em;
+    }
+    .products .card {
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+    }
+
+    .products:hover .card:not(:hover) {
+        filter: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    .card .card_img {
+        width: 8em;
+        aspect-ratio: 1/1;
+    }
+   .card .card_title {
+        font-size: .9em;
+    }
+    .card .card_price {
+        bottom: 13em;
+        padding: .25em .5em;
+    }
+    .offer .offer_text {
+        text-align: center;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+    
+    .more {
+        padding-inline: .5em;
+        width: 100%;
+    }
+    .more .more_products {
+        gap: 1em;
+    }
+    .more_products .product_img {
+        width: 11em;
+        height: 11em;
+    }
+}
